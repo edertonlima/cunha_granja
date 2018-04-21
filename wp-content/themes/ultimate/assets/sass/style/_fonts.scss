@@ -1,7 +1,10 @@
 @import 'fontawesome/font-awesome';
 
 @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Cabin+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
 $cabin: 'Cabin Condensed', sans-serif;
-$bubblegum: 'Bubblegum Sans', cursive;
+//$bubblegum: 'Bubblegum Sans', cursive;
+$bubblegum: 'Ubuntu', sans-serif;
 
 $font-family: $cabin; 

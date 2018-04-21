@@ -33,6 +33,10 @@ body * {
 
 		p {
 			text-align: justify;
+
+			&.center {
+				text-align: center;
+			}
 		}
 
 		&.nossa-equipe {
@@ -155,11 +159,72 @@ body * {
 	}
 
 	&.row-img-cover {
-		height: $img-cover;
-		padding: 0;
+		padding: 120px 0 40px;
 
 		.subtitulo {
 			color: $laranja;
+		}
+
+		.slide {
+			height: auto; 
+
+			.item {
+				height: $img-cover; 
+
+				.img-cover {
+					background-size: cover;
+					background-repeat: no-repeat;
+					height: $img-cover;
+				}	
+			}
+
+			p {
+				&.subtitulo {
+					margin-top: 60px;
+				}
+
+				&.txt-slide-home {
+					font-size: 1.2rem;
+					text-align: left;
+					line-height: 1.5rem;
+					color: $cor-txt;
+					text-shadow: none;
+					max-width: 100%;
+					margin: 0;
+				}
+			}
+
+			.carousel-indicators {
+				position: relative;
+				margin: 40px 0 0;
+
+				li {
+					width: auto;
+					height: auto;
+					border: none;
+					opacity: 1;
+
+					&.btn-slide {
+						color: $laranja;
+						text-indent: 0;
+						border-radius: 2px;
+						padding: 0 15px;
+						line-height: 40px;
+						text-shadow: none;
+
+						&:hover, &:active {
+							color: $azul-celeste;
+							background-color: transparent;
+						}
+					}
+
+					&.active, &.active:hover {
+						background-color: $azul-celeste;
+						color: #ffffff;
+						box-shadow: none;
+					}
+				}
+			}
 		}
 
 		[class*="col-"] {
@@ -169,11 +234,13 @@ body * {
 			.middle {
 				display: table-cell;
 				vertical-align: middle;
-				padding: 100px;
+				padding: 50px 0 50px 50px;
 
 				h2 {
 					margin-bottom: 20px;
 					color: $laranja;
+					line-height: 2.5rem;
+					font-size: 2.5rem;
 				}
 			}
 		}

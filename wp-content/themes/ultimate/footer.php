@@ -8,19 +8,19 @@
 					<div class="item-info-header fale-conosco">
 						<i class="fa  fa-headphones"></i>
 						<span class="title">Atendimento</span>
-						<span class="subtitle">+55 47 3278-8756</span>
+						<span class="subtitle"><?php the_field('telefone', 'option'); ?></span>
 					</div>
 
 					<div class="item-info-header">
 						<i class="fa  fa-envelope-o"></i>
 						<span class="title">Escreva-nos</span>
-						<span class="subtitle">contato@granjacunha.com.br</span>
+						<span class="subtitle"><?php the_field('email', 'option'); ?></span>
 					</div>
 
 					<div class="item-info-header escreva">
 						<i class="fa fa-map-marker"></i>
 						<span class="title">Endereço</span>
-						<span class="subtitle">Rua João Pereira santos, 248<br>Vila Olímpia, Itajaí, SC</span>
+						<span class="subtitle"><?php the_field('endereco', 'option'); ?></span>
 					</div>
 				</div>
 
@@ -52,28 +52,27 @@
 				<a href="<?php echo get_home_url(); ?>/fale-conosco" class="link-footer"><i class="icons fa fa-chevron-right"></i>Fale Conosco</a>
 			</div>
 
-			<div class="col-3 categorias-produtos">
-				<h3>SIGA-NOS</h3>
-				<div class="redes">
-					<a href="javascript:"><i class="fa fa-facebook"></i></a>
-					<a href="javascript:"><i class="fa fa-instagram"></i></a>
+			<?php if( have_rows('redes_sociais','option') ): ?>
+				<div class="col-3 categorias-produtos">
+					<h3>SIGA-NOS</h3>
+					<div class="redes">
+
+						<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
+
+							<a href="<?php the_sub_field('url'); ?>" title="<?php the_sub_field('nome'); ?>"><?php the_sub_field('icone'); ?></a>
+
+						<?php endwhile; ?>
+
+					</div>
 				</div>
-			</div>
+			<?php endif; ?>
+			
 		</div>
 	</div>
 	
 	<div class="copy">
 		<div class="container">
 			<p><i class="fa fa-copyright" aria-hidden="true"></i> <?php echo date('Y').' '; the_field('titulo', 'option'); ?> - Todos os direitos reservados.</p>
-			<?php if( have_rows('redes_sociais','option') ): ?>
-				<div class="redes">						
-					<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
-						<a href="<?php the_sub_field('url','option'); ?>" title="<?php the_sub_field('nome','option'); ?>" target="_blank">
-							<?php the_sub_field('icone','option'); ?>
-						</a>
-					<?php endwhile; ?>
-				</div>
-			<?php endif; ?>
 		</div>
 	</div>
 </footer>

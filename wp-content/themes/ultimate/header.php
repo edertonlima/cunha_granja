@@ -278,13 +278,13 @@
 				<div class="item-info-header">
 					<i class="fa  fa-headphones"></i>
 					<span class="title">Atendimento</span>
-					<span class="subtitle">+55 47 3278-8756</span>
+					<span class="subtitle"><?php the_field('telefone', 'option'); ?></span>
 				</div>
 
 				<div class="item-info-header">
 					<i class="fa  fa-envelope-o"></i>
 					<span class="title">Escreva-nos</span>
-					<span class="subtitle">contato@granjacunha.com.br</span>
+					<span class="subtitle"><?php the_field('email', 'option'); ?></span>
 				</div>
 			</div>
 			
@@ -296,9 +296,11 @@
 						<li class="<?php if(is_page(array( 'quem-somos'))){ echo 'active'; } ?>">
 							<a href="<?php echo get_home_url(); ?>/quem-somos">Quem Somos <i class="fa fa-sort-desc"></i></a> 
 							<ul>
-								<li class=""><a href="<?php echo get_home_url(); ?>">Qualidade</a></li>
-								<li class=""><a href="<?php echo get_home_url(); ?>">Responsabilidade ambiental </a></li>
-								<li class=""><a href="<?php echo get_home_url(); ?>">Responsabilidade social</a></li>
+								<li class=""><a href="<?php echo get_home_url(); ?>/qualidade">Qualidade</a></li>
+								<li class=""><a href="<?php echo get_home_url(); ?>/estrutura">Estrutura</a></li>
+								<li class=""><a href="<?php echo get_home_url(); ?>/logistica">Logística</a></li>
+								<li class=""><a href="<?php echo get_home_url(); ?>/area-de-atuacao">Área de Atuação</a></li>
+								<li class=""><a href="<?php echo get_home_url(); ?>/responsabilidade-social-e-ambiental">Responsabilidade social e ambiental</a></li>
 							</ul>
 						</li>
 						<li class="<?php if((is_post_type_archive('produtos')) or (is_tag()) or (is_tax('produtos_taxonomy')) or (is_singular('produtos'))){ echo 'active'; } ?>">
@@ -313,15 +315,23 @@
 						<li class="<?php if(is_page(array( 'fale-conosco', 'trabalhe-conosco' ))){ echo 'active'; } ?>">
 							<a href="<?php echo get_home_url(); ?>/fale-conosco">Fale Conosco <i class="fa fa-sort-desc"></i></a>
 							<ul>
-								<li class=""><a href="<?php echo get_home_url(); ?>">Trabalhe Conosco</a></li>
+								<li class=""><a href="<?php echo get_home_url(); ?>/trabalhe-conosco">Trabalhe Conosco</a></li>
 							</ul>
 						</li>
 					</ul>
 
-					<div class="redes">
-						<a href="javascript:"><i class="fa fa-facebook"></i></a>
-						<a href="javascript:"><i class="fa fa-instagram"></i></a>
-					</div>
+					<?php if( have_rows('redes_sociais','option') ): ?>
+							<div class="redes">
+
+								<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
+
+									<a href="<?php the_sub_field('url'); ?>" title="<?php the_sub_field('nome'); ?>"><?php the_sub_field('icone'); ?></a>
+
+								<?php endwhile; ?>
+
+							</div>
+					<?php endif; ?>
+
 				</nav>
 			</div>
 

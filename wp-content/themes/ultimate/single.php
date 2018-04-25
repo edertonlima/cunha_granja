@@ -18,7 +18,7 @@
 							<?php $imagem = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' ); ?>
 
 							<?php if($imagem[0]){ ?>
-								<div class="col-6">						
+								<div class="col-6 center">						
 									<img src="<?php echo $imagem[0]; ?>" class="img-page">
 								</div>
 							<?php } ?>	

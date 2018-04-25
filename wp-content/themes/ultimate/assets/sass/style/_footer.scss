@@ -37,7 +37,7 @@
 		top: -40px;
 		left: 0;
 		background-size: cover;
-		z-index: 9999;
+		z-index: 99;
 	}
 
 	p {
@@ -176,9 +176,20 @@
 		}
 
 		&.form-contato {
-			margin-top: 115px;
+			//margin-top: 115px;
 			.title, .subtitle {
-				color: $azul-celeste;
+				//color: $azul-celeste;
+			}
+
+			.info-header {
+				line-height: normal;
+			}
+
+			.item-info-header {
+				width: 100%!important;
+				margin: 20px 0 0 0px!important;
+				display: block !important;
+				clear: both;
 			}
 		}
 	}

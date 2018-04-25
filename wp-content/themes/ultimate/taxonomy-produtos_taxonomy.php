@@ -4,7 +4,7 @@
 
 	<div class="main-title" style="">
 		<div class="container">
-			<span class="categoria"><a href="<?php echo get_home_url(); ?>/produtos" title="PRODUTOS">PRODUTOS</a></span>
+			<span class="categoria"><a href="<?php echo get_home_url(); ?>/produtos" title="PRODUTOS">Produtos</a></span>
 			<h3 class="titulo"><?php echo single_term_title(); ?></h3>
 			<p class="subtitulo">
 				<?php echo get_queried_object()->description; ?>

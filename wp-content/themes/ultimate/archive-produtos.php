@@ -2,7 +2,7 @@
 
 	<div class="main-title" style="">
 		<div class="container">
-			<h3 class="titulo">PRODUTOS</h3>
+			<h3 class="titulo">Produtos</h3>
 			<p class="subtitulo">
 				<?php 
 					if((isset($_SESSION['id'])) and ($_SESSION['id'] != '')){ ?>

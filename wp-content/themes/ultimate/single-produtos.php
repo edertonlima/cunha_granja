@@ -12,7 +12,7 @@
 		<div class="container">
 			<span class="categoria">
 				<a href="<?php echo get_home_url(); ?>/produtos" title="PRODUTOS">
-					PRODUTOS 
+					Produtos 
 				</a>
 
 				<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -65,12 +65,7 @@
 											<?php } ?>
 										</div>
 
-										<?php the_excerpt(); ?>
-
-										<a href="javascript:" title="Solicitar Orçamento" class="btn btn-saiba-mais enviar" id="add-orcamento" nome-prod="<?php the_title(); ?>" cod-prod="<?php the_field('codigo'); ?>">
-											<i class="fa fa-paper-plane" aria-hidden="true"></i>
-											Solicitar Orçamento
-										</a>	
+										<?php the_excerpt(); ?>	
 
 									</div>	
 								</div>

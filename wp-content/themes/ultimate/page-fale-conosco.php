@@ -54,7 +54,6 @@
 					<div class="col-7">
 						<form action="javascript:" class="form-padrao">
 							<fieldset class="col-12">
-								<h4>Envie sua mensagem para nós:</h4>
 								<p class="msg-form"></p>
 							</fieldset>
 							<fieldset class="col-12">
@@ -75,26 +74,20 @@
 						<div class="info-header info-contato form-contato">
 							<div class="item-info-header escreva">
 								<i class="fa fa-headphones"></i>
-								<span class="title">Fale Conosco</span>
-								<span class="subtitle">+55 47 3344-1697</span>
-							</div>
-
-							<div class="item-info-header escreva">
-								<i class="fa  fa-clock-o"></i>
-								<span class="title">Atendimento</span>
-								<span class="subtitle">08:00 - 18:00</span>
+								<span class="title">Telefone</span>
+								<span class="subtitle"><?php the_field('telefone', 'option'); ?></span>
 							</div>
 
 							<div class="item-info-header escreva">
 								<i class="fa  fa-envelope-o"></i>
 								<span class="title">Escreva-nos</span>
-								<span class="subtitle">valdeir.repres@hotmail.com</span>
+								<span class="subtitle"><?php the_field('email', 'option'); ?></span>
 							</div>
 
 							<div class="item-info-header escreva">
 								<i class="fa fa-map-marker"></i>
 								<span class="title">Endereço</span>
-								<span class="subtitle">Rua Vereador Nestor dos Santos, 1155<br>Cordeiros, Itajaí, SC</span>
+								<span class="subtitle"><?php the_field('endereco', 'option'); ?></span>
 							</div>
 						</div>
 					</div>

@@ -1,7 +1,15 @@
-.produto {
-	.col-4 {
+.produtos.row {
+	text-align: center;
 
+	.col-4 {
+		float: none;
+		display: inline-block;
 	}
+}
+
+
+
+.produto {
 	.list-produto {
 	}
 

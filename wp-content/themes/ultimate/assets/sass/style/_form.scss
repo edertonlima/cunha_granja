@@ -235,7 +235,6 @@ form {
 
 	&.form-padrao {
 		width: 100%;
-		margin-top: 50px;
 	}
 
 	&.login {
@@ -245,6 +244,16 @@ form {
 	input, textarea {
 		max-width: 100%;
 	}
+}
+
+.form-contato {
+	span.subtitle {
+		color: $cor-txt!important;
+	}
+}
+
+.info-contato.form-contato {
+	margin-top: 60px !important;
 }
 
 fieldset {
